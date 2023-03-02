@@ -1,0 +1,38 @@
+import Head from 'next/head'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import Link from 'next/link'
+
+export default function FirstPost() {
+    return (
+        <div className="container">
+      <Head>
+        <title>Mikail.net</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>
+        <Header title="Mikail Lekesiz" />
+        <p className="description">
+          mikail@lekesiz.org
+        </p>
+        <form name="login" method="POST" data-netlify="true">
+        <p>
+            <label>Email: <input type="email" name="email" /></label>
+          </p>
+          <p>
+            <label>Password: <input type="password" name="password" /></label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+        <h1 className="title">
+          Welcome to <a href="..\">Next.js!</a>
+        </h1>
+      </main>
+
+      <Footer />
+    </div>
+    );
+  }
